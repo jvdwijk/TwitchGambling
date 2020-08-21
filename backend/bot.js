@@ -3,11 +3,11 @@ const tmi = require('tmi.js');
 
 const opts = {
   identity: {
-    username: "BasicMilky",
+    username: process.env.BOT_ACCOUNT,
     password: process.env.AUTH
   },
   channels: [
-    "BasicMilky"
+    process.env.STREAM_ACCOUNT
   ]
 };
 const client = new tmi.client(opts);
