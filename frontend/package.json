@@ -11,6 +11,9 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "socket.io-client": "2.3.0"
+  },
   "devDependencies": {
     "css-loader": "^4.2.1",
     "html-loader": "^1.2.1",
