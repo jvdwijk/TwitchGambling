@@ -1,4 +1,3 @@
-require('dotenv').config();
 const tmi = require('tmi.js');
 
 const opts = {
@@ -14,16 +13,11 @@ const client = new tmi.client(opts);
 
 client.on('message', onMessageHandler);
 client.on('connected', onConnectedHandler);
-
-// Connect to Twitch:
 client.connect();
 
-// Called every time a message comes in
 function onMessageHandler (target, context, msg, self) {
   if (self) { return; } 
   const commandName = msg.trim();
-
-  console.log(context.username + " " + commandName);
 
   if (commandName === '!dice') {
     const num = rollDice();
