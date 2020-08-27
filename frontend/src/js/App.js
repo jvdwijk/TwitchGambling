@@ -2,7 +2,7 @@ import "../css/main.scss"
 import io from 'socket.io-client';
 
 
-const socket = io.connect("ws://localhost:3008/slots/110ec58a-a0f2-4ac4-8393-c866d813b8d1");
+const socket = io.connect("ws://localhost:3008/slots");
 socket.on('error', (err) => {
     console.log(err);
 });
