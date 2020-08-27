@@ -11,21 +11,19 @@ class SlotMachineGame {
 
     }
 
-    async _getTwitchLogin() {
-        return new Promise((resolve, reject) => {
-            resolve({
-                botName: process.env.BOT_ACCOUNT,
-                authCode: process.env.AUTH,
-                streamAccount: process.env.STREAM_ACCOUNT
-            })
-        })
+    _getTwitchLogin() {
+        return {
+            botName: process.env.BOT_ACCOUNT,
+            authCode: process.env.AUTH,
+            streamAccount: process.env.STREAM_ACCOUNT
+        }
 
     }
 
     async _acceptConnection(socket) {
         try {
             this._client = new SMClient(socket);
-            const twitchData = await this._getTwitchLogin();
+            const twitchData = this._getTwitchLogin();
             this._chatbot = await this._initChatbot(twitchData);
             this._chatbot.onMessageRecieved(this._handleIncomingMessage.bind(this));
         } catch (err) {
