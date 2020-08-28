@@ -45,9 +45,11 @@ class GamblingMachine {
         let paylineCharacters = []
 
         for (let i = 0; i < config.paylines[paylineNumber].length; i++) {
+            const slots = this.reels[i].slots;
             let position = this.physicalSlots[i].slotNumber + config.paylines[paylineNumber][i]
-            position = MathUtil.setLoop(0, this.reels[i].reelInfo.slots.length - 1, position)
-            paylineCharacters[i] = this.reels[i].reelInfo.slots[position].character
+            
+            position = MathUtil.setLoop(0, slots.length - 1, position)
+            paylineCharacters[i] = slots[position].character
         }
         return paylineCharacters
     }
