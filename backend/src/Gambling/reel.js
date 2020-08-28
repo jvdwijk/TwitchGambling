@@ -2,9 +2,10 @@ class Reel {
 
     constructor(reelInfo){
       this.reelInfo = reelInfo;
+      this.reelLength = this._calculateDigitalReelLength();
     }
 
-    getDigitalReelLength(){
+    _calculateDigitalReelLength(){
       let reelSize = 0;
       for (let i = 0; i < this.reelInfo.slots.length; i++) {
         reelSize += this.reelInfo.slots[i].chance;
@@ -13,16 +14,17 @@ class Reel {
       return reelSize;
     }
 
-    _findPhysicalSlot(slotNumber){
+    findPhysicalSlot(slotNumber){
       let currentPosition = 0;
 
       for (let i = 0; i < this.reelInfo.slots.length; i++) {
         currentPosition += this.reelInfo.slots[i].chance;
 
         if(slotNumber <= currentPosition){
-          return i;
+          return {"slotNumber": i, "character": this.reelInfo.slots[i].character};
         }
       }
     }
-    
   }
+
+  module.exports = Reel

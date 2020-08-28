@@ -39,7 +39,7 @@ class TwitchChatBot {
     }
 
     async sendMessage(message) {
-        return this.client.say(this._channel[0], message).catch()
+        return this.client.say(this._channel[0], message)
     }
 
     _createClient() {
