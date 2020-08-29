@@ -1,0 +1,133 @@
+{
+    "characters": [
+        "Empty",
+        "Cherry",
+        "Bar",
+        "Superbar",
+        "G7",
+        "R7",
+        "Any"
+    ],
+    "paylines": [[0, 0, 0], [1, 1, 1], [-1, -1, -1], [-1, 0, 1], [1, 0, 1]],
+    "combos": [
+        {
+            "characters": [0, 0, 0],
+            "value": 0},
+        {
+            "characters": [1, 6, 6],
+            "value": 2
+        },
+        {
+            "characters": [1, 1, 6],
+            "value": 4
+        },
+        {
+            "characters": [1, 1, 1],
+            "value": 10
+        },
+        {
+            "characters": [2, 2, 2],
+            "value": 50
+        },
+        {
+            "characters": [3, 3, 3],
+            "value": 100
+        },
+        {
+            "characters": [[2, 2, 3], [2, 3, 3], [3, 2, 2], [3, 3, 2], [3, 2, 3]],
+            "value": 25
+        },
+        {
+            "characters": [[4, 4, 5], [4, 5, 5], [5, 4, 5], [5, 5, 4], [5, 4, 4]],
+            "value": 50
+        },
+        {
+            "characters": [4, 4, 4],
+            "value": 150
+        },
+        {
+            "characters": [5, 5, 5],
+            "value": 300
+        }
+    ],
+    "reels": [
+        {
+            "slots": [
+                {"character": 0, "chance": 2},
+                {"character": 1, "chance": 4},
+                {"character": 0, "chance": 4},
+                {"character": 5, "chance": 1},
+                {"character": 0, "chance": 5},
+                {"character": 2, "chance": 3},
+                {"character": 0, "chance": 4},
+                {"character": 3, "chance": 3},
+                {"character": 0, "chance": 4},
+                {"character": 4, "chance": 2},
+                {"character": 0, "chance": 4},
+                {"character": 3, "chance": 4},
+                {"character": 0, "chance": 4},
+                {"character": 2, "chance": 4},
+                {"character": 0, "chance": 4},
+                {"character": 1, "chance": 7},
+                {"character": 0, "chance": 4},
+                {"character": 5, "chance": 1},
+                {"character": 0, "chance": 4},
+                {"character": 4, "chance": 2},
+                {"character": 0, "chance": 4},
+                {"character": 3, "chance": 3}
+            ]
+        },
+        {
+            "slots": [
+                {"character": 0, "chance": 2},
+                {"character": 1, "chance": 4},
+                {"character": 0, "chance": 4},
+                {"character": 5, "chance": 1},
+                {"character": 0, "chance": 5},
+                {"character": 2, "chance": 3},
+                {"character": 0, "chance": 4},
+                {"character": 3, "chance": 3},
+                {"character": 0, "chance": 4},
+                {"character": 4, "chance": 2},
+                {"character": 0, "chance": 4},
+                {"character": 3, "chance": 4},
+                {"character": 0, "chance": 4},
+                {"character": 2, "chance": 4},
+                {"character": 0, "chance": 4},
+                {"character": 1, "chance": 7},
+                {"character": 0, "chance": 4},
+                {"character": 5, "chance": 1},
+                {"character": 0, "chance": 4},
+                {"character": 4, "chance": 2},
+                {"character": 0, "chance": 4},
+                {"character": 3, "chance": 3}
+            ]
+        },
+        {
+            "slots": [
+                {"character": 0, "chance": 2},
+                {"character": 1, "chance": 4},
+                {"character": 0, "chance": 4},
+                {"character": 5, "chance": 1},
+                {"character": 0, "chance": 5},
+                {"character": 2, "chance": 3},
+                {"character": 0, "chance": 4},
+                {"character": 3, "chance": 3},
+                {"character": 0, "chance": 4},
+                {"character": 4, "chance": 2},
+                {"character": 0, "chance": 4},
+                {"character": 3, "chance": 4},
+                {"character": 0, "chance": 4},
+                {"character": 2, "chance": 4},
+                {"character": 0, "chance": 4},
+                {"character": 1, "chance": 7},
+                {"character": 0, "chance": 4},
+                {"character": 5, "chance": 1},
+                {"character": 0, "chance": 4},
+                {"character": 4, "chance": 2},
+                {"character": 0, "chance": 4},
+                {"character": 3, "chance": 3}
+            ]
+        }
+    ]
+}

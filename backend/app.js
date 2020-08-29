@@ -4,7 +4,6 @@ const io = require('socket.io')(http);
 const SlotMachineGame = require("./src/games/slotmachine/slotMachineGame")
 
 const slotMachineGame = new SlotMachineGame('slots', io);
-
 http.listen(3008, () => {
   console.log('listening on *:3008');
 });

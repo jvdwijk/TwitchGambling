@@ -1,4 +1,5 @@
 const tmi = require('tmi.js');
+require('dotenv').config();
 
 const opts = {
   identity: {
@@ -31,24 +32,7 @@ function onMessageHandler (target, context, msg, self) {
   }
 }
 
-function spinGamble(target, context){
-    var reelCharacters = [3];
-    for (let i = 0; i < 3; i++) {
-        reelCharacters[i] = getReel();
-    }
-    client.say(target, ` ${context["display-name"]}, Your results are:  ${reelCharacters[0]} - ${reelCharacters[1]} - ${reelCharacters[2]}`);
-        
-}
 
-function getReel(){
-    var characters = ["Empty", "Cherry", "Bar", "Superbar", "G7", "R7"];
-    var reels = { physicalReel: [0, 1, 0, 5, 0, 2, 0, 4, 0, 3 ],
-        digitalReel: [0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 2, 2, 2, 2, 0, 0, 0, 0, 0, 4, 4, 0, 0, 0, 0, 3, 3, 3 ] }; 
-
-        var randomNumber = Math.floor(Math.random() * reels.digitalReel.length);
-        console.log(characters[reels.digitalReel[randomNumber]]);
-    return characters[reels.digitalReel[randomNumber]];
-}
 
 
 

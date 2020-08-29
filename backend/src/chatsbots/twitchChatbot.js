@@ -39,7 +39,7 @@ class TwitchChatBot {
     }
 
     async sendMessage(message) {
-        return this.client.say(this._channel[0], message).catch()
+        return this.client.say(this._channel[0], message)
     }
 
     _createClient() {
@@ -58,13 +58,12 @@ class TwitchChatBot {
     }
 
     _createMessageData(channel, context, message, self) {
-
         return {
             platform: "twitch",
             channel: channel.substring(1),
 
             sender: context["display-name"],
-            senderIsMod: context.mod || context.badges.broadcaster == '1',
+            senderIsMod: context.mod || context.badges != null && context.badges.broadcaster == '1',
             messageType: MessageTypeConversion[context["message-type"]],
             message,
 
