@@ -36,7 +36,7 @@ class GamblingMachine {
 
         for (let i = 0; i < payline; i++) {
             const paylineCharacters = this._getPaylineCharacters(i)
-            coinsGained += this._checkCombos(paylineCharacters)            
+            coinsGained += this._checkCombos(paylineCharacters)  
         }
         return coinsGained;
     }
@@ -51,18 +51,44 @@ class GamblingMachine {
             position = MathUtil.setLoop(0, slots.length - 1, position)
             paylineCharacters[i] = slots[position].character
         }
+        console.log(paylineCharacters)
         return paylineCharacters
     }
 
     _checkCombos(paylineCharacters){
         let coinsGained = 0
         config.combos.forEach(combo => {
-            //TODO check if combo has multiple values inside AND check if combo uses the ANY character (6)
-            if(combo.characters.toString() === paylineCharacters.toString()){
-                coinsGained += combo.value
+            if(Array.isArray(combo)){
+                combo.forEach(singleCombo => {
+                    coinsGained += this._checkCombo(singleCombo, paylineCharacters, combo.value)
+                })
             }
+            else{
+                coinsGained += this._checkCombo(combo, paylineCharacters, combo.value)
+            }           
         });
-        return coinsGained
+        return coinsGained || 0
+    }
+
+    _checkCombo(combo, paylineCharacters, comboValue = 0){
+        if(combo.characters.toString() === paylineCharacters.toString()){
+            return comboValue
+        }
+        
+        const anyNumber = 6 
+        const emptyNumber = 0
+        
+        let isCombo = true; 
+        for (let i = 0; i < combo.characters.length; i++) {
+            const anyCheck = combo.characters[i] === anyNumber && !paylineCharacters[i] == emptyNumber
+            if(!anyCheck && combo.characters[i] != paylineCharacters[i]){
+                isCombo = false;
+            }
+        }
+        if(isCombo){
+            return comboValue
+        } 
+        return 0
     }
 }
 
