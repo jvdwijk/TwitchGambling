@@ -9,11 +9,24 @@
     "tmi.js": "^1.5.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "@types/jest": "26.0.23",
+    "@types/node": "13.7",
+    "@typescript-eslint/eslint-plugin": "4.27.0",
+    "@typescript-eslint/parser": "4.27.0",
+    "eslint": "7.29.0",
+    "jest": "26.6.3",
+    "ts-jest": "26.5.6",
+    "typescript": "3.9.10"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "tsc && node dist/app.js",
+    "start:watch": "tsc-watch --project . --outDir ./dist --onSuccess \"nodemon ./dist/app.js\"",
+    "build": "tsc",
+    "test": "jest",
+    "test:cover": "jest --collect-coverage",
+    "lint": "eslint ./src --ext .ts",
+    "lint:fix": "eslint ./src --ext .ts --fix",
+    "check": "jest && eslint ./src --ext .ts"
   },
   "author": "",
   "license": "ISC"
