@@ -1,0 +1,11 @@
+{
+    "characters": [
+        "Empty",
+        "cherry.png",
+        "bar.png",
+        "superBar.png",
+        "greenSeven.png",
+        "redSeven.png"
+    ],
+    "paylines": [[0, 0, 0], [1, 1, 1], [-1, -1, -1], [-1, 0, 1], [1, 0, 1]]
+}
