@@ -1,16 +1,17 @@
 import { createServer } from "http";
 import { Server } from 'socket.io'
 import * as dotenv from "dotenv";
+import SlotMachineGame from "./games/slotMachineGame";
+import Game from "./games/game";
 
 dotenv.config();
 
 const SERVER_PORT = 3008;
 
 const httpServer = createServer();
-const io = new Server(httpServer, {});
+const io = new Server(httpServer, {cors: {origin: '*'}});
 
-//TODO: rewrite slotmachine to ts after it's been converted to ts itself
-const SlotMachineGame = require("./games/slotmachine/slotMachineGame") 
-const slotMachineGame = new SlotMachineGame('slots', io);
+const slotMachineGame: Game = new SlotMachineGame('slots', io);
+slotMachineGame.start();
 
 httpServer.listen(SERVER_PORT);

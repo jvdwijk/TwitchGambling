@@ -29,7 +29,6 @@
 
 		// Best Practices
 		"array-callback-return": "error",
-		"class-methods-use-this": "warn",
 		"consistent-return": "error",
 		"curly": "error",
 		"default-case-last": "error",
@@ -55,13 +54,6 @@
 		"no-invalid-this": "error",
 		"no-lone-blocks": "warn",
 		"no-loop-func": "error",
-		"no-magic-numbers": [
-			"error",
-			{
-				"ignore": [0, 1],
-				"ignoreArrayIndexes": true
-			}
-		],
 		"no-multi-str": "error",
 		"no-new": "warn",
 		"no-new-func": "error",
@@ -73,7 +65,6 @@
 		"no-useless-call": "error",
 		"no-useless-concat": "error",
 		"no-useless-return": "error",
-		"no-warning-comments": "warn",
 		"prefer-promise-reject-errors": ["error", { "allowEmptyReject": true }],
 		"radix": "error",
 		"require-await": "error",
@@ -96,7 +87,6 @@
 		"function-call-argument-newline": ["warn", "consistent"],
 		"implicit-arrow-linebreak": ["warn", "beside"],
 		"lines-around-comment": ["warn", { "beforeBlockComment": true }],
-		"lines-between-class-members": ["warn", "always"],
 		"max-nested-callbacks": ["warn", 3],
 		"multiline-comment-style": ["warn", "starred-block"],
 		"multiline-ternary": ["warn", "always-multiline"],
@@ -167,11 +157,10 @@
 		//Naming convention: https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md
 		"@typescript-eslint/no-base-to-string": "error",
 		"@typescript-eslint/no-confusing-non-null-assertion": "error",
-		"@typescript-eslint/no-confusing-void-expression": "error",
 		"@typescript-eslint/no-dynamic-delete": "error",
 		"@typescript-eslint/no-extraneous-class": "warn",
 		"@typescript-eslint/no-for-in-array": "error",
-		"@typescript-eslint/no-implicit-any-catch": "error",
+		// "@typescript-eslint/no-implicit-any-catch": "error", //Enable on ts version 4 or greater
 		"@typescript-eslint/no-inferrable-types": [
 			"error",
 			{ "ignoreParameters": true }
