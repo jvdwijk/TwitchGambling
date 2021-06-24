@@ -1,13 +1,13 @@
 import MessageType from "./messageType";
 
-export default class Message{
-    public platform: string;
-    public channel: string;
+export default interface Message{
+    readonly platform: string;
+    readonly channel: string;
 
-    public sender: string;
-    public senderIsMod: boolean;
-    public messageType: MessageType;
-    public message: string;
+    readonly sender: string;
+    readonly senderIsMod: boolean;
+    readonly messageType: MessageType;
+    readonly message: string;
 
-    public self: boolean;
+    readonly self: boolean;
 }

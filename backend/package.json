@@ -21,8 +21,8 @@
     "typescript": "3.9.10"
   },
   "scripts": {
-    "start": "tsc && node dist/app.js",
-    "start:watch": "tsc-watch --project . --outDir ./dist --onSuccess \"nodemon ./dist/app.js\"",
+    "start:once": "tsc && node dist/app.js",
+    "start": "tsc-watch --project . --outDir ./dist --onSuccess \"nodemon ./dist/app.js\"",
     "build": "tsc",
     "test": "jest",
     "test:cover": "jest --collect-coverage",
